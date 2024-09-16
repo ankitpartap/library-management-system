@@ -1,0 +1,155 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="LibrarySystem.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <!--Including CSS for installed libraries-->
+
+    <!--bootstrap css file-->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!--datatable css file-->
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <!-- <link href="cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css" rel="stylesheet"> -->
+
+    <!--fontawesome css file-->
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <!--Adding bootstrap JS -->
+    <!--JQuery -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!--popper js-->
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <!--bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Datatable JS-->
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+    <!-- <script src="cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script> -->
+
+
+    <!-- Our custom CSS -->
+    <link href="CSS/StyleSheet1.css" rel="stylesheet"/>
+
+    <!--Icon-->
+    <link rel="shortcut icon" type="img/x-icon" href="~/images/logo.png" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <!-- NAVIGATION BAR -->
+        <div>
+            <!-- Left Side of Navigation Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="homepage.aspx">
+                    <img src="images/logo.png" width="60" height="60" />
+                    Nalanda
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <!-- <a class="nav-link" href="#">About Us</a> -->
+                        </li>
+                        <li class="nav-item active">
+                            <!-- <a class="nav-link" href="#">Terms</a> -->
+                        </li>
+                    </ul>
+
+                     <!-- Right Side of Navigation Bar -->
+                    <ul class="navbar-nav">
+                        <!-- 1 -->
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">View Books</asp:LinkButton>
+                        </li>
+                        
+                        <!-- 2 -->
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Member Login</asp:LinkButton>
+                        </li>
+
+                        <!-- 3 -->
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton6" runat="server" OnClick="LinkButton6_Click">Sign Up</asp:LinkButton>
+                        </li>
+
+                        <!-- 4 -->
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" Visible="False" OnClick="LinkButton7_Click">Logout</asp:LinkButton>
+                        </li>
+
+                        <!-- 5 -->
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton8" runat="server" Visible="False" OnClick="LinkButton8_Click">Hello user</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer Open -->
+        <footer>
+            <!-- Footer1 Open-->
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <!-- 1 -->
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">Admin Login</asp:LinkButton>
+                            &nbsp;
+                            <!-- 2 -->
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click" Visible="False">Author Management</asp:LinkButton>
+                            &nbsp;
+                            <!-- 3 -->
+                            
+                            &nbsp;
+                            <!-- 4 -->
+                            <asp:LinkButton class="footerlinks" ID="LinkButton12" runat="server" OnClick="LinkButton12_Click" Visible="False">Book Inventory</asp:LinkButton>
+                            &nbsp;
+                            <!-- 5 -->
+                            <asp:LinkButton class="footerlinks" ID="LinkButton13" runat="server" OnClick="LinkButton13_Click" Visible="False">Book Issuing</asp:LinkButton>
+                            &nbsp;
+                            <!-- 6 -->
+                             <asp:LinkButton class="footerlinks" ID="LinkButton14" runat="server" OnClick="LinkButton14_Click" Visible="False">Member Management</asp:LinkButton>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--Footer1 Closed -->
+
+            <!-- Footer2 Open-->
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">&copy All right Reversed. <a class="footerlinks" href="homepage.aspx">Nalanda</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--Footer2 Closed -->
+        <!--Footer Closed -->
+        </footer>
+    </form>
+</body>
+</html>
